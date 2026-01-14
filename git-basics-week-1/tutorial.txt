@@ -1,0 +1,49 @@
+Git Basics Tutorial
+
+Step 1: check if you have Git:
+
+press ctrl + j to open the terminal and type in "git --version"
+
+Step 2: initialize a repository:
+
+type "git init into the terminal"
+-- there should be a "u" next to all of the files in the vscode directory, it means "untracked" --
+
+Step 3: staging a file (to be committed):
+
+type git add "directory/file-name.ext" 
+-- there should be an "a" next to the targeted file in the vscode directory, meaning the file is added to the repository --
+
+Step 4: check the git status
+Type "git status" into the terminal to see whether things were staged/committed
+
+Step 4: commit with a message 
+
+Type into terminal: git commit -m "message"
+-- the -m allows you to follow up the commit with a message to determine what changes were implemented --
+
+Step 5: Create a repository in Github and add your local repository into into it
+
+type in terminal: "git branch -M main"
+
+-- capital M means move/transfer --
+-- Forces the rename, even if a branch called main already exists --
+-- moves main -> main
+-- the main on the left is the local main branch --
+-- the main on the right is the github main branch --
+
+Step 6: Push the repository into the main branch
+
+type in terminal: "git push -u origin main"
+
+Step 7: check the list of branches in the repository
+
+Step 8: create a branch
+
+type: "git branch branchname"
+
+Step 9: switch to the second branch
+
+type: "git checkout branchname"
+
+Step 10 (optional for testing): Make an edit to one of the files and save it
