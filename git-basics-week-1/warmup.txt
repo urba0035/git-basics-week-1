@@ -1,0 +1,73 @@
+Basic warmup for VSCODE/Github workflow.
+
+Step 1: check if you have Git:
+
+press ctrl + j to open the terminal and type in "git --version"
+
+Step 2: initialize a repository:
+
+type "git init into the terminal"
+-- there should be a "u" next to all of the files in the vscode directory, it means "untracked" --
+
+Step 3: staging a file (to be committed):
+
+type git add "directory/file-name.ext" 
+-- there should be an "a" next to the targeted file in the vscode directory, meaning the file is added to the repository --
+
+Step 4: check the git status
+Type "git status" into the terminal to see whether things were staged/committed
+
+Step 5: commit with a message 
+
+Type into terminal: git commit -m "message"
+-- the -m allows you to follow up the commit with a message to determine what changes were implemented --
+
+Step 6 (GITHUB.COM): Create a repository in Github
+
+Step 7: merge the local main branch into the Github main branch
+
+type in terminal: "git branch -M main"
+
+Step 8: Push the local repository into github repository
+
+type in terminal: "git push -u origin main"
+
+Step 9: check the list of branches in the repository
+
+type in terminal: "git branch"
+
+Step 9: create a branch
+
+type: "git branch branchname"
+
+Step 10: switch to the second branch
+
+type: "git checkout branchname"
+
+Step 11: create a file in new branch and make edits to it
+
+Step 12 : push changes made on second branch to second branch in Github
+
+type in terminal: "git push origin branchname"
+
+Step 13 (GITHUB.COM): create a pull request (PR) to request pulling changes from the second branch into the main branch
+
+on Github.com, visit the repository's Pull Requests tab and press "New Pull Request"
+
+after making the correct selection, click on "Create Pull Request"
+
+add a title and description and Create
+
+Step 14 (GITHUB.COM): press the button that merges the changes into the main branch
+
+Step 15 (GITHUB.COM): Go to the branches tab and delete the secondary branch
+
+Step 16: After deleting the branch on GitHub, you still need to delete the local copy on VSCODE
+
+1. switch to main branch
+type in terminal: "git checkout main"
+
+2. delete the secondary branch
+type in terminal: "git branch -d branchname"
+
+Step 17: Warmup complete !
