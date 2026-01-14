@@ -2,55 +2,84 @@ Basic warmup for VSCODE/Github workflow.
 
 Step 1: check if you have Git:
 
-press ctrl + j to open the terminal and type in "git --version"
+press ctrl + j to open the terminal and type in
+git --version
 
 Step 2: initialize a repository:
 
-type "git init into the terminal"
+type into terminal: git init 
 -- there should be a "u" next to all of the files in the vscode directory, it means "untracked" --
 
 Step 3: staging a file (to be committed):
 
-type git add "directory/file-name.ext" 
+type into terminal: git add "directory/file-name.ext"
+
+-- tip: "git add ." to stage multiple changed files at once --
+
 -- there should be an "a" next to the targeted file in the vscode directory, meaning the file is added to the repository --
 
 Step 4: check the git status
-Type "git status" into the terminal to see whether things were staged/committed
 
-Step 5: commit with a message 
+type into terminal: git status
+-- checks whether things were staged/committed --
 
-Type into terminal: git commit -m "message"
+Step 5: commit with a message
+
+Type into terminal:
+git commit -m "message"
+
 -- the -m allows you to follow up the commit with a message to determine what changes were implemented --
 
 Step 6 (GITHUB.COM): Create a repository in Github
 
-Step 7: merge the local main branch into the Github main branch
+Step 6.5 (VSCODE): connect the local repository to the Github repository
 
-type in terminal: "git branch -M main"
+type in terminal:
+git remote add origin https://github.com/USERNAME/REPO-NAME.git
+
+Step 7: rename the local branch to main (to match Github’s default branch)
+
+type in terminal:
+git branch -M main
 
 Step 8: Push the local repository into github repository
 
-type in terminal: "git push -u origin main"
+type in terminal:
+git push -u origin main
 
 Step 9: check the list of branches in the repository
 
-type in terminal: "git branch"
+type in terminal:
+git branch
 
-Step 9: create a branch
+Step 10: create a new branch
 
-type: "git branch branchname"
+type:
+git branch branchname
 
-Step 10: switch to the second branch
+Step 11: switch to the second branch
 
-type: "git checkout branchname"
+type:
+git checkout branchname
 
-Step 11: create a file in new branch and make edits to it
+Step 12: create a file in new branch and make edits to it
 
-Step 12 : push changes made on second branch to second branch in Github
+Step 13: stage the file's edits
 
-type in terminal: "git push origin branchname"
+type in terminal:
+git add "directory/file-name.ext"
 
-Step 13 (GITHUB.COM): create a pull request (PR) to request pulling changes from the second branch into the main branch
+Step 14: commit the file's edits with a message
+
+type in terminal:
+git commit -m "message"
+
+Step 15: push changes made on second branch to second branch in Github
+
+type in terminal:
+git push origin branchname
+
+Step 16 (GITHUB.COM): create a pull request (PR) to request pulling changes from the second branch into the main branch
 
 on Github.com, visit the repository's Pull Requests tab and press "New Pull Request"
 
@@ -58,16 +87,24 @@ after making the correct selection, click on "Create Pull Request"
 
 add a title and description and Create
 
-Step 14 (GITHUB.COM): press the button that merges the changes into the main branch
+Step 17 (GITHUB.COM): press the button that merges the changes into the main branch
 
-Step 15 (GITHUB.COM): Go to the branches tab and delete the secondary branch
+!!! Step 18: switch back to the main branch in VSCODE
 
-Step 16: After deleting the branch on GitHub, you still need to delete the local copy on VSCODE
+type in terminal:
+git checkout main
 
-1. switch to main branch
-type in terminal: "git checkout main"
+Step 19 (GITHUB.COM): Go to the branches tab and delete the secondary branch
 
-2. delete the secondary branch
-type in terminal: "git branch -d branchname"
+Step 20: After deleting the branch on GitHub, you still need to delete the local copy on VSCODE
 
-Step 17: Warmup complete !
+Delete the secondary branch
+type in terminal:
+git branch -d branchname
+
+Step 20.5 (optional but recommended): clean up deleted remote branches locally
+
+type in terminal:
+git fetch --prune
+
+Step 21: Warmup complete !
